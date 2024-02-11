@@ -51,7 +51,6 @@ rules:
   line-length:
     ignore: |
       .github/support.yml
-      amazon-s3-backup/condig.yml
     level: warning
     max: 120
     allow-non-breakable-words: true
