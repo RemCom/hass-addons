@@ -42,7 +42,7 @@ function generate-filename {
     local input="${1}"
     local prefix
 
-    declare -a forbidden=('\/' '\\' '\<' '\>' '\:' '\"' '\|' '\?' '\*' '\.' '\..' '\ ' '\-')
+    declare -a forbidden=('\/' '\<' '\>' '\:' '\"' '\|' '\?' '\*' '\.' '\..' '\ ' '\-')
     for fc in "${forbidden[@]}"; do
         input=${input//$fc/_}
     done

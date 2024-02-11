@@ -23,9 +23,13 @@ declare ALL_SHARES
 # Read and print config.
 # ------------------------------------------------------------------------------
 function get-config {
-    export AWS_ACCESS_KEY_ID=$(bashio::config 'aws_access_key' | escape-input)
-    export AWS_SECRET_ACCESS_KEY=$(bashio::config 'aws_secret_access_key' | escape-input)
-    export AWS_REGION=$(bashio::config 'bucket_region' | escape-input)
+    AWS_ACCESS_KEY_ID=$(bashio::config 'aws_access_key' | escape-input)
+    AWS_SECRET_ACCESS_KEY=$(bashio::config 'aws_secret_access_key' | escape-input)
+    AWS_REGION=$(bashio::config 'bucket_region' | escape-input)
+
+    export AWS_ACCESS_KEY_ID
+    export AWS_SECRET_ACCESS_KEY
+    export AWS_REGION
 
     BACKET_NAME=$(bashio::config 'bucket_name')
     STORAGE_CLASS=$(bashio::config 'storage_class')
