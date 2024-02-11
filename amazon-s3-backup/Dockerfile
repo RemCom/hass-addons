@@ -5,6 +5,8 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Setup base
+ARG AWSCLI_VERSION=1.32.39
 # hadolint ignore=DL3003,DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
@@ -20,7 +22,7 @@ RUN \
     py3-setuptools=68.2.2-r0 \
     python3=3.11.6-r1 \
   \
-  && pip3 install --upgrade awscli \
+  && pip3 install awscli==${AWSCLI_VERSION} \
   \
   && apk del --no-cache --purge .build-dependencies \
   && rm -f -r \
