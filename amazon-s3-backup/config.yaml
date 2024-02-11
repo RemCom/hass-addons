@@ -29,7 +29,7 @@ schema:
   bucket_name": str
   # yamllint disable-line rule:line-length
   bucket_region": list(us-east-1|us-east-2|us-west-1|us-west-2|ca-central-1|eu-north-1|eu-west-1|eu-central-1|eu-west-2|eu-west-3|ap-southeast-1|ap-southeast-2|ap-northeast-2|ap-northeast-1|ap-south-1|sa-east-1)
-  # yamllint disable-line rule:line-lengthß
+  # yamllint disable-line rule:line-length
   storage_class": list(STANDARD|REDUCED_REDUNDANCY|STANDARD_IA|ONEZONE_IA|INTELLIGENT_TIERING|GLACIER|DEEP_ARCHIVE)
   delete_local_backups": bool
   local_backups_to_keep": int
