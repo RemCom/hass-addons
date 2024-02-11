@@ -39,16 +39,10 @@ function create-backup {
 # Copy the latest backup to the remote share.
 # ------------------------------------------------------------------------------
 function copy-backup {
-    local store_name
-    local input
-    local count
-
     if [ "$SLUG" = "null" ]; then
         bashio::log.error "Error occurred! Backup could not be created! Please try again"
         return 1
     fi
-
-    store_name=$(generate-filename "$SNAP_NAME")
 
     bashio::log.info "Copying backup ${SLUG} to S3"
     cd /backup || return 1
