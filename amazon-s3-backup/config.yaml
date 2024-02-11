@@ -1,4 +1,5 @@
 ---
+# yamllint disable-line rule:line-length
 name: Amazon S3 Backup
 version: dev
 slug: amazon-s3-backup
