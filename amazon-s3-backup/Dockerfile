@@ -5,6 +5,9 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Copy root filesystem
+COPY rootfs /
+
 # Setup base
 ARG AWSCLI_VERSION=1.32.39
 # hadolint ignore=DL3003,DL3042
@@ -26,10 +29,11 @@ RUN \
   \
   && apk del --no-cache --purge .build-dependencies \
   && rm -f -r \
-    /tmp/*
+    /tmp/* \
+  \
+  && chmod a+x /run.sh
 
-# Copy root filesystem
-COPY rootfs /
+CMD [ "/run.sh" ]
 
 # Build arguments
 ARG BUILD_ARCH
