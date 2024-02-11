@@ -49,7 +49,7 @@ function copy-backup {
 
     bashio::log.debug "Using AWS CLI version: '$(aws --version)'"
     bashio::log.debug "Command: 'aws s3 cp ${SLUG}.tar s3://${BACKET_NAME}/ --no-progress --region ${BUCKET_REGION} --storage-class ${STORAGE_CLASS}'"
-    aws s3 cp ${SLUG}.tar s3://${BACKET_NAME}/ --no-progress --region ${BUCKET_REGION} --storage-class ${STORAGE_CLASS}
+    aws s3 cp "${SLUG}".tar s3://"${BACKET_NAME}"/ --no-progress --region "${BUCKET_REGION}" --storage-class "${STORAGE_CLASS}"
 }
 
 # ------------------------------------------------------------------------------

@@ -7,9 +7,6 @@
 # Returns 1 in case of a failure
 # ------------------------------------------------------------------------------
 function aws-precheck {
-    local result
-    local shares
-
     # not implemented yet
 
     return 0

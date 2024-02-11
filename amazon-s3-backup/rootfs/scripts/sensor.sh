@@ -175,7 +175,6 @@ function ha-post-sensor {
     fi
 
     status=${response##*$'\n'}
-    response=${response%$status}
 
     bashio::log.debug "API Status: ${status}"
     bashio::log.debug "API Response: ${response}"
