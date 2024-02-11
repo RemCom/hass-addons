@@ -3,7 +3,7 @@ name: Amazon S3 Backup
 version: dev
 slug: amazon-s3-backup
 description: "Sync Backups to your Amazon S3 bucket"
-url: "https://github.com/RemCom/hass-addons"
+url: "https://github.com/remcom/hass-addons"
 codenotary: dev@remcom.dev
 init: false
 hassio_api: true
