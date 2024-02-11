@@ -2,6 +2,7 @@
 
 Add-ons for Home Assistant written by Remco.
 To add this repository:
+
 1. Go to your Home Assistant Frontend
 2. Open **Supervisor** > **Add-On Store**,
 3. Click on the top right menu with the three dots.
