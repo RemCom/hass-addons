@@ -21,8 +21,18 @@ options:
   bucket_name": ""
   bucket_region": "eu-west-1"
   storage_class": "STANDARD"
-  delete_local_backups": false
-  local_backups_to_keep": 3
+  keep_local: all
+  trigger_time: 00:00
+  trigger_days:
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    - Sun
+  exclude_addons: []
+  exclude_folders: []
 schema:
   aws_access_key": str
   aws_secret_access_key": password
@@ -31,5 +41,13 @@ schema:
   bucket_region": list(us-east-1|us-east-2|us-west-1|us-west-2|ca-central-1|eu-north-1|eu-west-1|eu-central-1|eu-west-2|eu-west-3|ap-southeast-1|ap-southeast-2|ap-northeast-2|ap-northeast-1|ap-south-1|sa-east-1)
   # yamllint disable-line rule:line-length
   storage_class": list(STANDARD|REDUCED_REDUNDANCY|STANDARD_IA|ONEZONE_IA|INTELLIGENT_TIERING|GLACIER|DEEP_ARCHIVE)
-  delete_local_backups": bool
-  local_backups_to_keep": int
+  keep_local: match(^(all|[0-9]+)$)
+  trigger_time: match(^(manual|([0-1][0-9]|2[0-3]):[0-5][0-9])$)
+  trigger_days:
+    - match(Mon|Tue|Wed|Thu|Fri|Sat|Sun)
+  exclude_addons:
+    - str
+  exclude_folders:
+    - str
+  skip_precheck: bool?
+  log_level: list(debug|info|warning|error)?

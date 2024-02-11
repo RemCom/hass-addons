@@ -26,10 +26,14 @@ RUN \
   \
   && apk del --no-cache --purge .build-dependencies \
   && rm -f -r \
-    /tmp/*
+    /tmp/*  \
+   \
+  && chmod a+x /run.sh
 
 # Copy root filesystem
 COPY rootfs /
+
+CMD [ "/run.sh" ]
 
 # Build arguments
 ARG BUILD_ARCH
