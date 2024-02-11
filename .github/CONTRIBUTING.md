@@ -26,5 +26,5 @@ Even better: You could submit a pull request with a fix / new feature!
    the reviewer to merge it for you.
 
 [coc]: /.github/CODE_OF_CONDUCT.md
-[github]: https://github.com/RemCom/hass-addons/issues
-[prs]: https://github.com/RemCom/hass-addons/pulls
+[github]: https://github.com/remcom/hass-addons/issues
+[prs]: https://github.com/remcom/hass-addons/pulls
